@@ -1,0 +1,18 @@
+{
+  "name": "sap-suite-ui-microchart-sample--line-micro-chart",
+  "version": "1.0.0",
+  "author": "SAP SE",
+  "description": "Sample: Line Micro Chart",
+  "scripts": {
+    "start": "ui5 serve -o index.html",
+    "build": "ui5 build",
+    "deploy-config": "fiori add deploy-config",
+    "deploy": "npm run build && fiori deploy --config ui5-deploy.yaml",
+    "undeploy": "npm run build && fiori undeploy --config ui5-deploy.yaml",
+    "deploy-test": "npm run build && fiori deploy --config ui5-deploy.yaml --testMode true"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4",
+    "rimraf": "^5.0.5"
+  }
+}

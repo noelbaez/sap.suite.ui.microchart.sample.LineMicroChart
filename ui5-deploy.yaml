@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
+
+specVersion: "4.0"
+metadata:
+  name: sap-suite-ui-microchart-sample--line-micro-chart
+type: application
+framework:
+  name: SAPUI5
+  version: "1.120.14"
+  libraries:
+    - name: themelib_sap_horizon
+    - name: sap.m
+    - name: sap.suite.ui.microchart
+    - name: sap.ui.core
+    - name: sap.ui.layout
+builder:
+  resources:
+    excludes:
+      - /test/**
+      - /localService/**
+  customTasks:
+    - name: deploy-to-abap
+      afterTask: generateCachebusterInfo
+      configuration:
+        target:
+          url: http://vhcala4hci:50000/
+          client: '001'
+        app:
+          name: ZLINEMICROCHART
+          description: Line Microchart
+          package: TEST01
+          transport: ''
+        exclude:
+          - /test/
