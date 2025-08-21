@@ -10,6 +10,7 @@
         <StandardListItem title="{m>id} {m>name}" />
     </List>
     <Button text="Button" />
+    <Label text="Label" />
     <MessageStrip
         text="Please see for both data point types the samples with the visualization options:"
         class="sapUiSmallMargin"
