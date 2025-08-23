@@ -9,7 +9,7 @@
     <List items="{m>/data}">
         <StandardListItem title="{m>id} {m>name}" />
     </List>
-    <Button text="Button" />
+    <Button text="Button1" />
     <Label text="Label" />
     <MessageStrip
         text="Please see for both data point types the samples with the visualization options:"
